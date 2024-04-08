@@ -1,6 +1,13 @@
 package org.example;
 import java.util.PriorityQueue;
 
+/**
+ * La clase JavaPriorityQueue proporciona una implementación de la interfaz IPriorityQueue
+ * utilizando la clase PriorityQueue del Java Collection Framework.
+ *
+ * @param <E> El tipo de elementos almacenados en esta cola de prioridad. Debe ser Comparable.
+ */
+
 public class JavaPriorityQueue<E extends Comparable<E>> implements IPriorityQueue<E>{
 
     private PriorityQueue <E> queue;

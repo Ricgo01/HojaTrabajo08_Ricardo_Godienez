@@ -1,5 +1,10 @@
 package org.example;
 
+/**
+ * La clase Pacient representa a un paciente que será atendido en la sección de emergencias de un hospital.
+ * Contiene información sobre el nombre del paciente, su síntoma y un código de emergencia que determina la prioridad de atención.
+ */
+
 public class Pacient implements Comparable <Pacient> {
 
     private String nombre;

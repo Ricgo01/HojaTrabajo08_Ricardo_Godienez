@@ -3,6 +3,13 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * La clase VectorHeap implementa una cola de prioridad utilizando un heap.
+ * Los elementos son ordenados de acuerdo con su orden natural o mediante un comparador proporcionado al momento de la construcción del heap.
+ *
+ * @param <E> El tipo de elementos almacenados en el heap. Debe ser Comparable.
+ */
+
 public class VectorHeap <E extends Comparable<E>> implements IPriorityQueue <E>{
 
 
