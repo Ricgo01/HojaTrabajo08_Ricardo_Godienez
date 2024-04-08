@@ -1,6 +1,5 @@
 package org.example;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,15 +44,13 @@ public class Main {
                 System.out.println("Se ha creado la lista con la implementación VectorHeap.");
                 break;
             case 2:
-                colaDeEmergencias = QueueFactory.crearQueue(PriorityQueue.class);
+                colaDeEmergencias = QueueFactory.crearQueue(JavaPriorityQueue.class);
                 System.out.println("Se ha creado la lista con la implementación Java PriorityQueue.");
                 break;
             default:
                 System.out.println("Opción no válida.");
                 return;
         }
-
-
         for (Pacient paciente : pacientes) {
             colaDeEmergencias.add(paciente);
         }
@@ -63,6 +60,7 @@ public class Main {
             System.out.println("2. Atender a un paciente");
             System.out.println("3. Ver qué paciente es el siguiente en la lista de prioridad");
             System.out.println("4. Ver toda la lista de pacientes");
+            System.out.println("5. Para salir");
             int election1 = consoleScanner.nextInt();
             consoleScanner.nextLine();
 
@@ -88,7 +86,6 @@ public class Main {
                     System.out.println("Paciente añadido exitosamente.");
                     break;
                 case 2:
-                    // Atender (remover) al siguiente paciente
                     if (!colaDeEmergencias.isEmpty()) {
                         Pacient pacienteAtendido = colaDeEmergencias.remove();
                         System.out.println("Se esta ateniendo al paciente: " + pacienteAtendido.getNombre());
